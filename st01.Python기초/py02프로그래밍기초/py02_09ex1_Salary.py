@@ -9,6 +9,6 @@
 # 10년 동안의 저축액: ?????  원 형태로 출력하시오.
 
 salary = int(input("월급"))
-deposit = salary*10
+deposit = salary*10*12
 
 print(deposit , "원")
