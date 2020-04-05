@@ -37,31 +37,20 @@ else:
     print("F")
 
 
-
-
-
-
-
-
-
-
-
-
-
 ##반복문##
 
-grade = input("Grade :")  # 95
+grade = input("grade :")  # 95
 
 # grade는 0부터 100 사이의 값만 가능해야 한다.
 while grade < 0 or 100 < grade:
 
     # 그 이외의 값이 들어오면 grade를 다시 입력 받게 작성하시오.
-grade = input("grade :")  # 95
-grade = int(grade)  # 95
+    grade = input("grade :")  # 95
+    grade = int(grade)  # 95
 
-if 0 <= grade <= 100:
-    # 반복문 종료
-    break
-else:
-    # 다시 입력 받는다.
-    pass
+    if 0 <= grade <= 100:
+        # 반복문 종료
+        break
+    else:
+        # 다시 입력 받는다.
+        pass
