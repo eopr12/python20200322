@@ -17,12 +17,14 @@ print("환영합니다")
 for x in range(0, 5, 1):
     print("환영합니다")
 
+print("------------")
 # while 문
 # 조건식이 false일 때까지 반복
 i = 0
 while i < 5:
+    i = i + 1
     print("환영합니다")
-    count = i + 1
+    
 
 # 루프 탈출
 # 조건식이 false가 되는 경우
