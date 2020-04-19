@@ -109,7 +109,7 @@ print(array)
 ############################
 array = ["A", "a", "B", "b", "A", "a", "B", "b"]
 for i in array:
-    print(i, end" , ")
+    print(i, end = " , ")
 print()
 ############################
 # 리스트 정렬

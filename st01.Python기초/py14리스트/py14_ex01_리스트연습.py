@@ -43,9 +43,7 @@ print(리스트[방번호])
 #  U: 수정. 검색: "파이썬 리스트 수정"
 #  "BREAD" 를 "GRAPE"로 변경
 #  "BREAD" 가 들어있는 방번호 찾기
-리스트.replace("BREAD", "GRAPE")
-방번호 = 리스트.index("BREAD")
-print(리스트[방번호])
+
 
 #  D: 인덱스로 삭제. 검색: "파이썬 리스트 삭제"
 #  인덱스를 이용하여 GRAPE 를 삭제
