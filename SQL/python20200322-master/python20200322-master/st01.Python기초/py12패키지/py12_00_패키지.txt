@@ -1,0 +1,19 @@
+
+# 모듈 import 방법 3가지
+
+>>> import mylib.sound.echo
+>>> mylib.sound.echo.echo_test()
+echo
+
+
+>>> from mylib.sound import echo
+>>> echo.echo_test()
+echo
+
+>>> from mylib.sound.echo import echo_test
+>>> echo_test()
+echo
+
+>>> from mylib.sound.echo import *
+>>> echo_test()
+echo

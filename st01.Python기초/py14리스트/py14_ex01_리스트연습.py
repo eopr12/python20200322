@@ -24,7 +24,9 @@ value = ""
 리스트.append("BUTTER")
 print(리스트)
 
-리스트.insert(0, "MILK").insert(1, "BREAD").insert(2, "BUTTER")
+리스트.insert(0, "MILK")
+리스트.insert(1, "BREAD")
+리스트.insert(2, "BUTTER")
 
 print(리스트)
 #  APPLE 삽입. 검색: "파이썬 리스트 삽입"
@@ -43,36 +45,75 @@ print(리스트[방번호])
 #  U: 수정. 검색: "파이썬 리스트 수정"
 #  "BREAD" 를 "GRAPE"로 변경
 #  "BREAD" 가 들어있는 방번호 찾기
-
+방번호 = 리스트.index("BREAD")
+리스트[방번호] = "GRAPE"
+print(리스트)
 
 #  D: 인덱스로 삭제. 검색: "파이썬 리스트 삭제"
 #  인덱스를 이용하여 GRAPE 를 삭제
+방번호 = 리스트.index("GRAPE")
+리스트.pop(방번호)
+print(리스트)
 #  "GRAPE" 가 들어있는 방번호 찾기
 
 
 #  D: 값으로 찾아서 삭제. 검색: "파이썬 리스트 값으로 삭제"
 #  값으로 MILK를 찾아서 삭제하시오
-
+리스트.remove("MILK")
+리스트.pop(방번호)  # ['APPLE', 'BUTTER']
 
 #  P: 리스트를 for문으로 출력.
 #  검색: "파이썬 리스트 for 출력"
 #  검색: "파이썬 리스트 크기"
+# 1
+for i in 리스트:
+    print(i)  # i = 방의 값 자체
+print()
 
+# 2
+for i in range(0, len(리스트), 1):
+    # i = 방 번호
+    print(리스트[i])
 
 #  테스트용 데이터 생성을 위한 코드. 수정하지 마시오.
 print(리스트)  # ['APPLE', 'BUTTER']
 for i in range(4):
     리스트.append("APPLE")
     리스트.append("BANNA")
+print(리스트)
 
 # 도전.
 #  첫번째 APPLE이 있는 방번호를 출력하시오.
-
-
+방번호 = 리스트.index("APPLE")
+print("첫번째 APPLE이 있는 방번호", 방번호)
 #  S: 오름차순 정렬. 검색: "파이썬 리스트 오름차순 정렬"
+print("오름차순 정렬 전", 리스트)
+리스트.sort()
+print("오름차순 정렬 후", 리스트)
 
 #  S: 내림차순 정렬. 검색: "파이썬 리스트 내림차순 정렬"
+# reverse는 sort 쓴 다음에 같이 써야됨
+print("내림차순 정렬 전", 리스트)
+리스트.sort()
+리스트.reverse()
+print("내림차순 정렬 후", 리스트)
 
 #  APPLE 이 몇개 있나요?
+# 방법1: 메소드 사용
+APPLE개수 = 리스트.count("APPLE")
+print("APPLE 개수", APPLE개수)
+# 방법2: 반복문 사용
 
+APPLE개수 = 0
+for i in 리스트:
+    if i == "APPLE":
+        # 개수 세기
+        APPLE개수 = APPLE개수 + 1
+    else:
+        pass
+print("APPLE개수", APPLE개수)
 #  리스트 의 모든 값을 while 문을 사용하여 삭제하시오
+while len(리스트) > 0:
+    리스트.pop(0)  # ==첫 번째 방부터 지운다
+    # 리스트.pop(len(리스트)-1) ==마지막 방부터 지운다
+print(리스트)
